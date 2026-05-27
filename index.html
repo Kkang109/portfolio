@@ -3,47 +3,137 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Left Half-Vinyl Orbit Portfolio</title>
-	<link rel="stylesheet" href="css/index.style.css">
-<!--	<script src="js/index.js" defer></script>-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<script src="js/script.js" defer></script>
+	<title>Dreamy Designer</title>
 </head>
 <body>
 	
-	<div class="turntable-zone">
+	<div class="app-container">
+		<header class="header">
+			<div class="logo">DESIGNER. 美</div>
+			<nav class="nav">
+				<a href="#" class="active">PLAYLIST</a>
+				<a href="#">ARCHIVE</a>
+				<a href="#">MESSAGE</a>
+			</nav>
+		</header>
 		
-		<div class="orbit-vinyl" id="vinylGroup">
-			
-			<div class="vinyl-plate">
-				<div class="vinyl-grooves"></div>
-				<div class="vinyl-center-label">
-					<div class="center-hole"></div>
-				</div>
-			</div>
-			
-			<div class="track-orbit-container">
-				
-				<div class="orbit-item" style="--item-angle: 0deg; --random-tilt: -3deg; --offset-y: 0px;">
-					<div class="meta-tag">TRACK 01 // PLAYLIST!</div>
-					<div class="track-card intro-card">
-						<span class="index-num">001</span>
-						<h1>JAY'S<br>MELODIES</h1>
-						<p class="sub-text">[spin to play the track]</p>
+		<main class="main-wrapper">
+			<section class="left-content">
+				<div class="vinyl-box">
+					<div class="vinyl">
+						<div class="album-art" id="current-art"></div>
+					</div>
+					<div class="now-playing">
+						<p class="status">NOW PLAYING</p>
+						<h2 id="current-title">Project 01. xxxx</h2>
 					</div>
 				</div>
 				
-				<div class="orbit-item" style="--item-angle: 35deg; --random-tilt: 5deg; --offset-y: 40px;">
-					<div class="meta-tag">TRACK 02 // SELECTED WORK</div>
-					<div class="track-card project-card" onclick="window.open('https://example.com/project1', '_blank')">
-						<span class="index-num">002</span>
-						<div class="card-preview-zone" style="background-color: #909b82;">whodunit</div>
-						<div class="card-body">
-							<h3>whodunit</h3>
-							<p>Branding & Creative Interaction Web Design Concept.</p>
-							<span class="link-badge">VIEW WORK TRACK ↗</span>
+				<div class="accordion">
+					<div class="accordion-item active">
+						<div class="accordion-header">
+							<span><i class="fa-solid fa-star"></i> MY SKILLS</span>
+							<i class="fa-solid fa-chevron-down arrow"></i>
+						</div>
+						<div class="accordion-body">
+							<div class="skill-tags">
+								<span>HTML/CSS</span>
+								<span>Figma</span>
+								<span>Javascript</span>
+								<span>React</span>
+								<span>Photoshop</span>
+								<span>Illustrator</span>
+								<span>Indesign</span>
+								<span>After Effects</span>
+							</div>
+							<p class="info-text">디자인과 개발의 언어를 모두 이해하는 시각을 길렀습니다.</p>
+						</div>
+					</div>
+					
+					<div class="accordion-item">
+						<div class="accordion-header">
+							<span><i class="fa-solid fa-user"></i> ABOUT ME</span>
+							<i class="fa-solid fa-chevron-down arrow"></i>
+						</div>
+						<div class="accordion-body">
+							<p class="info-text">
+								안녕하세요! 몽글몽글한 감성을 코드로 구현하는 웹 퍼블리싱 디자이너 김미진입니다.
+							</p>
+						</div>
+					</div>
+					
+					<div class="accordion-item">
+						<div class="accordion-header">
+							<span><i class="fa-solid fa-envelope"></i> CONTACT</span>
+							<i class="fa-solid fa-chevron-down arrow"></i>
+						</div>
+						<div class="accordion-body">
+							<p class="info-text">Email: Kkangmelo@gmail.com<br>Phone: 010-1234-5678</p>
 						</div>
 					</div>
 				</div>
-				
-				<div class="orbit-item" style="--item-angle: 70deg; --random-tilt: -6deg; --offset-y: -20px;">
-					<div class="meta-tag">TRACK 03 // SELECTED WORK</div>
-					<div class="track-card project
+			</section>
+			
+			<section class="right-content">
+				<h3 class="list-title">TRACKLIST (PROJECTS)</h3>
+				<div class="track-list">
+					
+					<div class="track active" data-title="Project 01. Portfolio" data-img="https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg">
+						<span class="num">01</span>
+						<div class="thumb" style="background-image: url('https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg')"></div>
+						<div class="details">
+							<h4>첫 번째 프로젝트</h4>
+							<p>Design & Publishing</p>
+						</div>
+						<a href="./html/project01.html" class="view-btn">View on</a>
+					</div>
+					
+					<div class="track" data-title="Project 02. Pet Community" data-img="https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg">
+						<span class="num">02</span>
+						<div class="thumb" style="background-image: url('https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg')"></div>
+						<div class="details">
+							<h4>두 번째 프로젝트</h4>
+							<p>Design & Publishing</p>
+						</div>
+						<a href="./html/project02.html" class="view-btn">View on</a>
+					</div>
+					
+					<div class="track" data-title="Project 03. Pet Community" data-img="https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg">
+						<span class="num">03</span>
+						<div class="thumb" style="background-image: url('https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg')"></div>
+						<div class="details">
+							<h4>세 번째 프로젝트</h4>
+							<p>Design & Publishing</p>
+						</div>
+						<a href="./html/project03.html" class="view-btn">View on</a>
+					</div>
+					
+					<div class="track" data-title="Project 04. Pet Community" data-img="https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg">
+						<span class="num">04</span>
+						<div class="thumb" style="background-image: url('https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg')"></div>
+						<div class="details">
+							<h4>네 번째 프로젝트</h4>
+							<p>Design & Publishing</p>
+						</div>
+						<a href="./html/project04.html" class="view-btn">View on</a>
+					</div>
+					
+					<div class="track" data-title="Project 05. Pet Community" data-img="https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg">
+						<span class="num">05</span>
+						<div class="thumb" style="background-image: url('https://i.pinimg.com/736x/6a/00/5e/6a005e289f1821b6b7e2a380473c6387.jpg')"></div>
+						<div class="details">
+							<h4>다섯 번째 프로젝트</h4>
+							<p>Design & Publishing</p>
+						</div>
+						<a href="./html/project05.html" class="view-btn">View on</a>
+					</div>
+					
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
